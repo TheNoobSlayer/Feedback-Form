@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\config",
+    "\\src",
+    "\\src\\auth",
+    "\\src\\core",
+    "\\src\\user"
+  ],
+  "SelectedNode": "\\src\\user\\api-user.js",
+  "PreviewInSolutionExplorer": false
+}
