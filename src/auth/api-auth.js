@@ -1,5 +1,8 @@
-const signin = (user) => {
-  return fetch('/auth/signin/', {
+console.log("bochya in api-auth");
+const login = (user) => {
+    console.log("bochya inside login");
+    console.log(user);
+    return fetch('http://localhost:5000/auth/signin', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -14,7 +17,7 @@ const signin = (user) => {
 }
 
 const signout = () => {
-  return fetch('/auth/signout/', {
+    return fetch('http://localhost:5000/auth/signout', {
     method: 'GET',
   }).then(response => {
       return response.json()
@@ -22,6 +25,6 @@ const signout = () => {
 }
 
 export {
-  signin,
+  login,
   signout
 }

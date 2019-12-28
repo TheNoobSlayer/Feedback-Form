@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/styles'
 import auth from './../auth/auth-helper'
 import {Redirect} from 'react-router-dom'
-import {signin} from './api-auth.js'
+import {login} from './api-auth.js'
 
 const styles = theme => ({
   card: {
@@ -50,9 +50,10 @@ class Signin extends Component {
     const user = {
       email: this.state.email || undefined,
       password: this.state.password || undefined
-    }
-
-    signin(user).then((data) => {
+      }
+      console.log("Bochya in click submit");
+      console.log(login);
+    login(user).then((data) => {
       if (data.error) {
         this.setState({error: data.error})
       } else {

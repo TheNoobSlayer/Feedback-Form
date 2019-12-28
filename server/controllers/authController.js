@@ -4,6 +4,7 @@ const expressJwt = require('express-jwt');
 const config = require('./../../config/config');
 
 const signin = (req, res) => {
+    console.log("Bochya inside sign in");
     User.findOne({
         "email": req.body.email
     }, (err, user) => {

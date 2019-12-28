@@ -37,8 +37,8 @@ class Home extends Component {
                 <CardMedia className={classes.media} title="Unicorn Shells" />
                 <CardContent>
                     <Typography type="body1" component="p">
-                        Welcome to the MERN Skeleton home page.
-                </Typography>
+                         
+                    </Typography>
                 </CardContent>
             </Card>
         )

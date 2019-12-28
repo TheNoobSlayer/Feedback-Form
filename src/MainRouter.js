@@ -6,9 +6,9 @@ import Signup from './user/Signup'
 //import Signin from './user/signin'
 
 import Signin from './auth/Signin'
-//import EditProfile from './user/EditProfile'
-//import Profile from './user/Profile'
-//import PrivateRoute from './auth/PrivateRoute'
+import EditProfile from './user/EditProfile'
+import Profile from './user/Profile'
+import PrivateRoute from './auth/PrivateRoute'
 import Menu from './core/menu'
 const styles = theme => ({
     card: {
@@ -55,6 +55,8 @@ class MainRouter extends Component {
 
                 <Route path="/signup" component={Signup} />
                 <Route path="/signin" component={Signin} />
+                <Route path="/user/:userId" component={Profile} />
+                <PrivateRoute path="/user/edit/:userId" component={EditProfile} />
 
 
 

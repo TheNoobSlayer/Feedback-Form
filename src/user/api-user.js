@@ -1,5 +1,5 @@
 const create = (user) => {
-    return fetch('/api/users/', {
+    return fetch('http://localhost:5000/api/students', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
@@ -21,7 +21,7 @@ const list = () => {
 }
 
 const read = (params, credentials) => {
-    return fetch('/api/users/' + params.userId, {
+    return fetch('http://localhost:5000/api/students/' + params.userId, {
         method: 'GET',
         headers: {
             'Accept': 'application/json',
@@ -34,7 +34,7 @@ const read = (params, credentials) => {
 }
 
 const update = (params, credentials, user) => {
-    return fetch('/api/users/' + params.userId, {
+    return fetch('http://localhost:5000/api/students' + params.userId, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json',
@@ -48,7 +48,7 @@ const update = (params, credentials, user) => {
 }
 
 const remove = (params, credentials) => {
-    return fetch('/api/users/' + params.userId, {
+    return fetch('http://localhost:5000/api/students' + params.userId, {
         method: 'DELETE',
         headers: {
             'Accept': 'application/json',
