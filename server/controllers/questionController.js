@@ -73,29 +73,7 @@ const listBySubject = (req, res) => {
 }
 
 
-/*
-const listRelated = (req, res) => {
-    Question.find({ "_id": { "$ne": req.question }, "category": req.question.category }).limit(5).populate('subject', '_id name').exec((err, questions) => {
-        if (err) {
-            return res.status(400).json({
-                error: errorHandler.getErrorMessage(err)
-            })
-        }
-        res.json(questions)
-    })
-}
 
-const listCategories = (req, res) => {
-    Question.distinct('category', {}, (err, questions) => {
-        if (err) {
-            return res.status(400).json({
-                error: errorHandler.getErrorMessage(err)
-            })
-        }
-        res.json(questions)
-    })
-}
-*/
 const list = (req, res) => {
     /*const query = {}
     if (req.query.search)
@@ -111,38 +89,7 @@ const list = (req, res) => {
         res.json(questions)
     }).populate('subject', '_id name')
 }
-/*
-const decreaseQuantity = (req, res, next) => {
-    let bulkOps = req.body.order.products.map((item) => {
-        return {
-            "updateOne": {
-                "filter": { "_id": item.product._id },
-                "update": { "$inc": { "quantity": -item.quantity } }
-            }
-        }
-    })
-    Product.bulkWrite(bulkOps, {}, (err, products) => {
-        if (err) {
-            return res.status(400).json({
-                error: "Could not update product"
-            })
-        }
-        next()
-    })
-}
 
-const increaseQuantity = (req, res, next) => {
-    Product.findByIdAndUpdate(req.product._id, { $inc: { "quantity": req.body.quantity } }, { new: true })
-        .exec((err, result) => {
-            if (err) {
-                return res.status(400).json({
-                    error: errorHandler.getErrorMessage(err)
-                })
-            }
-            next()
-        })
-}
-*/
 module.exports= {
     create,
     questionByID,
@@ -150,10 +97,7 @@ module.exports= {
     update,
     remove,
     listBySubject,
-   // listLatest,
-   // listRelated,
-    //listCategories,
-    list,
-   // decreaseQuantity,
-    //increaseQuantity
+   
+    list
+   
 }

@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\config",
-    "\\server",
     "\\server\\controllers",
     "\\server\\helpers",
     "\\server\\models",
     "\\server\\routes",
     "\\src",
     "\\src\\auth",
-    "\\src\\core"
+    "\\src\\core",
+    "\\src\\user"
   ],
-  "SelectedNode": "\\server\\helpers\\dbErrorHandler.js",
+  "SelectedNode": "\\src\\user\\Questions.js",
   "PreviewInSolutionExplorer": false
 }

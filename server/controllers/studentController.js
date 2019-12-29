@@ -16,9 +16,7 @@ const create = (req, res, next) => {
     })
 }
 
-/**
- * Load user and append to req.
- */
+
 const userByID = (req, res, next, id) => {
     User.findById(id).exec((err, user) => {
         if (err || !user)

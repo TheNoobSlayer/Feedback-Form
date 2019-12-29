@@ -1,6 +1,6 @@
-console.log("bochya in api-auth");
+console.log("I am in api-auth");
 const login = (user) => {
-    console.log("bochya inside login");
+    console.log("I am inside login");
     console.log(user);
     return fetch('http://localhost:5000/auth/signin', {
       method: 'POST',

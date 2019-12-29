@@ -3,7 +3,7 @@ const _ = require('lodash');
 const errorHandler = require('./../helpers/dbErrorHandler');
 
 const create = (req, res, next) => {
-    console.log("Bochya inside create subject");
+    console.log("I am inside create subject");
  
     const subject = new Subject(req.body)
     subject.save((err, result) => {
@@ -40,18 +40,7 @@ const subjectByID = (req, res, next, id) => {
         next()
     })
 }
-/*
-const photo = (req, res, next) => {
-    if (req.shop.image.data) {
-        res.set("Content-Type", req.shop.image.contentType)
-        return res.send(req.shop.image.data)
-    }
-    next()
-}
-const defaultPhoto = (req, res) => {
-    return res.sendFile(process.cwd() + profileImage)
-}
-*/
+
 const list = (req, res) => {
     Subject.find((err, subjects) => {
         if (err) {

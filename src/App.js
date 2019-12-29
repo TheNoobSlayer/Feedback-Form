@@ -24,7 +24,7 @@ const theme = createMuiTheme({
         },
         //openTitle: indigo['400'],
         //protectedTitle: pink['400'],
-        type: 'dark'
+        type: 'light'
     }
 })
 const App = () => (
