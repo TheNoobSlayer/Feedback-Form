@@ -35,7 +35,10 @@ const read = (params, credentials) => {
 }
 
 const update = (params, credentials, user) => {
-    return fetch('http://localhost:5000/api/students' + params.userId, {
+    console.log("Bo inside update");
+    console.log(params);
+    console.log(credentials);
+    return fetch('http://localhost:5000/api/students/' + params.userId, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json',
@@ -49,7 +52,7 @@ const update = (params, credentials, user) => {
 }
 
 const remove = (params, credentials) => {
-    return fetch('http://localhost:5000/api/students' + params.userId, {
+    return fetch('http://localhost:5000/api/students/' + params.userId, {
         method: 'DELETE',
         headers: {
             'Accept': 'application/json',

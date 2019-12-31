@@ -51,7 +51,7 @@ class Signin extends Component {
       email: this.state.email || undefined,
       password: this.state.password || undefined
       }
-      console.log("I am in click submit");
+      console.log("Bo in click submit");
       console.log(login);
     login(user).then((data) => {
       if (data.error) {
