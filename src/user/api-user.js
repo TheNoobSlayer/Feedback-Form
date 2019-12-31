@@ -13,7 +13,7 @@ const create = (user) => {
 }
 
 const list = () => {
-    console.log("I am in list questions");
+    console.log("Bo in list questions");
     return fetch('http://localhost:5000/api/students', {
         method: 'GET',
     }).then(response => {

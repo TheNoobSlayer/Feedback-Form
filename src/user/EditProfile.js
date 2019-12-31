@@ -9,7 +9,7 @@ import Icon from '@material-ui/core/Icon'
 import PropTypes from 'prop-types'
 import {withStyles} from '@material-ui/core/styles'
 import auth from './../auth/auth-helper'
-import {read, update} from './api-user.js'
+import {read, update} from './api-user'
 import {Redirect} from 'react-router-dom'
 
 const styles = theme => ({

@@ -29,7 +29,7 @@ app.use(compress())
 app.use(helmet())
 
 app.use(function (req, res, next) {
-    console.log("Bo inside express respone");
+    //console.log("Bo inside express respone");
     res.header("Access-Control-Allow-Origin", "*");
 
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept,");

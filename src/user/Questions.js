@@ -13,7 +13,10 @@ import Typography from '@material-ui/core/Typography'
 import ArrowForward from '@material-ui/icons/ArrowForward'
 import Person from '@material-ui/icons/Person'
 import {Link} from 'react-router-dom'
-import {list} from './api-question.js'
+import { list } from './api-question.js'
+import Radio from '@material-ui/core/Radio';
+import Button from '@material-ui/core/Button'
+
 
 const styles = theme => ({
     root: theme.mixins.gutters({
@@ -47,10 +50,11 @@ class Questions extends Component {
             <Paper className={classes.root} elevation={4}>
                 <Typography type="title" className={classes.title}>
                     All Questions
-        </Typography>
+                </Typography>
                 <List dense>
                     {this.state.questions.map((item, i) => {
-                        return <Link to={"/question/" + item._id} key={i}>
+                        console.log(item.option);
+                        return <>
                             <ListItem button>
                                 <ListItemAvatar>
                                     <Avatar>
@@ -58,13 +62,30 @@ class Questions extends Component {
                                     </Avatar>
                                 </ListItemAvatar>
                                 <ListItemText primary={item.question} />
-                                <ListItemSecondaryAction>
+                               
+                            </ListItem>
+                            <ListItem >
+                                <ListItemAvatar>
                                     <IconButton>
                                         <ArrowForward />
                                     </IconButton>
-                                </ListItemSecondaryAction>
+                                </ListItemAvatar>
+                                <IconButton >
+                                    <ListItemText primary={item.option[0]}/>
+                                </IconButton>
+                                <IconButton >
+                                    <ListItemText primary={item.option[1]} />
+                                </IconButton>
+                                <IconButton >
+                                    <ListItemText primary={item.option[2]} />
+                                </IconButton>
+                                <IconButton >
+                                    <ListItemText primary={item.option[3]} />
+                                </IconButton>
                             </ListItem>
-                        </Link>
+                           
+
+                        </>
                     })
                     }
                 </List>
