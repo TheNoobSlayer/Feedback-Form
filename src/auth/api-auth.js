@@ -7,8 +7,9 @@ const login = (user) => {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
-      },
-      credentials: 'include',
+        },
+        credentials: "omit",
+        
       body: JSON.stringify(user)
     })
     .then((response) => {

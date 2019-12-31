@@ -2,15 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\config",
+    "\\server",
     "\\server\\controllers",
     "\\server\\helpers",
     "\\server\\models",
     "\\server\\routes",
     "\\src",
     "\\src\\auth",
-    "\\src\\core",
     "\\src\\user"
   ],
-  "SelectedNode": "\\src\\user\\Questions.js",
+  "SelectedNode": "\\src\\auth\\api-auth.js",
   "PreviewInSolutionExplorer": false
 }

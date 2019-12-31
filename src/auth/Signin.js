@@ -57,6 +57,7 @@ class Signin extends Component {
       if (data.error) {
         this.setState({error: data.error})
       } else {
+          console.log(data);
         auth.authenticate(data, () => {
           this.setState({redirectToReferrer: true})
         })
