@@ -30,12 +30,17 @@ const styles = theme => ({
 })
 
 class Questions extends Component {
-    state = {
-        questions: []
+    constructor({ match }) {
+        super();
+        this.state = {
+            questions: []
+        }
+        this.match = match;
     }
+  
 
     componentDidMount() {
-        list().then((data) => {
+        list({ subjectId: this.match.params.subjectId }).then((data) => {
             if (data.error) {
                 console.log(data.error)
             } else {

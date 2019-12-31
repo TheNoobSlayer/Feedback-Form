@@ -7,6 +7,8 @@ import Signup from './user/Signup'
 import Questions from './user/Questions'
 import EditProfile from './user/EditProfile'
 import Profile from './user/Profile'
+import Subjects from './user/Subjects'
+
 
 import Signin from './auth/Signin'
 
@@ -48,8 +50,8 @@ class MainRouter extends Component {
                 
                 <Route exact path="/" component={Home} />
                 <Route path="/users" component={Users} />
-                <Route path="/questions" component={Questions} />
-
+                <Route path="/questions/of/:subjectId" component={Questions} />
+                <Route path="/subjects" component={Subjects}/>
                 <Route path="/signup" component={Signup} />
                 <Route path="/signin" component={Signin} />
                 <PrivateRoute path="/user/edit/:userId" component={EditProfile} />

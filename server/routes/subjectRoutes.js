@@ -15,7 +15,7 @@ router.route('/api/subjects/by/:userId')
     .post(subjectCtrl.create)
     .get(subjectCtrl.listByTeacher)
 
-router.route('/api/subjects/:subjectId')
+router.route('/api/subject/:subjectId')
     .put(subjectCtrl.update)
     .delete(subjectCtrl.remove)
 

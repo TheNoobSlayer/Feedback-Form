@@ -9,7 +9,7 @@
     "\\server\\routes",
     "\\src",
     "\\src\\auth",
-    "\\src\\user"
+    "\\src\\core"
   ],
   "SelectedNode": "\\src\\auth\\api-auth.js",
   "PreviewInSolutionExplorer": false
