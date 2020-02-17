@@ -31,6 +31,7 @@ const create = (req, res, next) => {
 }
 
 const subjectByID = (req, res, next, id) => {
+    //console.log(req.body.feedback);
     Subject.findById(id).populate('teacher', '_id name').exec((err, subject) => {
         if (err || !subject)
             return res.status('400').json({
@@ -87,29 +88,34 @@ const update = (req, res, next) => {
     
 }
 const storeFeedback = (req, res, next) => {
+    console.log("Bo inside store feedback");
     let subject = req.subject
+    // console.log(subject);
+   // subject = _.extend(subject, req.body)
     console.log(subject);
-    subject = _.extend(subject, req.body)
-    console.log(subject);
-
+    let feedback = req.body.feedback;
+    console.log(feedback);
+    
     var i=0;
    /* var subjectFeedback = {
         feedback:[1,3,2,0,3,2]
     }*/
     for (i = 0; i < 6; i++) {
-        if (subjectFeedback.feedback[i] == 0) {
-            subject.optionA[i]++;
+        if (feedback[i] == 0) {
+            req.subject.optionA[i]++;
         }
-        else if (subjectFeedback.feedback[i] == 1) {
-            subject.optionB[i]++;
+        else if (feedback[i] == 1) {
+            req.subject.optionB[i]++;
         }
-        else if (subjectFeedback.feedback[i] == 2) {
-            subject.optionC[i]++;
+        else if (feedback[i] == 2) {
+            req.subject.optionC[i]++;
         }
         else {
-            subject.optionD[i]++;
+            req.subject.optionD[i]++;
         }
     }
+    console.log(req);
+    subject = _.extend(subject, req.body)
 
     subject.updated = Date.now()
     console.log(subject);
@@ -120,6 +126,7 @@ const storeFeedback = (req, res, next) => {
                 error: errorHandler.getErrorMessage(err)
             })
         }
+        console.log(subject);
         res.json(subject)
     })
 

@@ -77,7 +77,7 @@ class Signup extends Component {
                 <CardContent>
                     <Typography type="headline" component="h2" className={classes.title}>
                         Sign Up
-          </Typography>
+                    </Typography>
                     <TextField id="name" label="Name" className={classes.textField} value={this.state.name} onChange={this.handleChange('name')} margin="normal" /><br />
                     <TextField id="email" type="email" label="Email" className={classes.textField} value={this.state.email} onChange={this.handleChange('email')} margin="normal" /><br />
                     <TextField id="password" type="password" label="Password" className={classes.textField} value={this.state.password} onChange={this.handleChange('password')} margin="normal" />

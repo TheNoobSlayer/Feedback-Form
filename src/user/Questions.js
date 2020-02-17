@@ -51,6 +51,7 @@ class Questions extends Component {
 
     render() {
         const { classes } = this.props
+        let x=0;
         return (
             <Paper className={classes.root} elevation={4}>
                 <Typography type="title" className={classes.title}>
@@ -58,13 +59,14 @@ class Questions extends Component {
                 </Typography>
                 <List dense>
                     {this.state.questions.map((item, i) => {
+                        x++;
                         console.log(item.option);
                         return <>
-                            <ListItem button>
+                            <ListItem>
                                 <ListItemAvatar>
-                                    <Avatar>
-                                        <Person />
-                                    </Avatar>
+                                  
+                                        <ListItemText primary={x}/>
+
                                 </ListItemAvatar>
                                 <ListItemText primary={item.question} />
                                

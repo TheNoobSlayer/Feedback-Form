@@ -18,12 +18,14 @@ const create = (req, res, next) => {
 
 
 const userByID = (req, res, next, id) => {
+    console.log("Bo inside userByID");
     User.findById(id).exec((err, user) => {
         if (err || !user)
             return res.status('400').json({
                 error: "User not found"
             })
         req.profile = user
+        console.log(user);
         next()
     })
 }
