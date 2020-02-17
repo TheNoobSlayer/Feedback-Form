@@ -7,10 +7,10 @@
     "\\server\\helpers",
     "\\server\\models",
     "\\server\\routes",
-    "\\src",
     "\\src\\auth",
-    "\\src\\core"
+    "\\src\\core",
+    "\\src\\user"
   ],
-  "SelectedNode": "\\src\\auth\\api-auth.js",
+  "SelectedNode": "\\server\\routes\\teacherRoutes.js",
   "PreviewInSolutionExplorer": false
 }
